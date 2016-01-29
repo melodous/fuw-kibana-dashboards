@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "hits": 0,
+  "sort": [
+    "response",
+    "desc"
+  ],
+  "title": "CICS transaction performance",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\n  \"index\": \"fuw-cics-*\",\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"lowercase_expanded_terms\": false,\n      \"query\": \"*\"\n    }\n  },\n  \"highlight\": {\n    \"pre_tags\": [\n      \"@kibana-highlighted-field@\"\n    ],\n    \"post_tags\": [\n      \"@/kibana-highlighted-field@\"\n    ],\n    \"fields\": {\n      \"*\": {}\n    },\n    \"fragment_size\": 2147483647\n  },\n  \"filter\": []\n}"
+  },
+  "columns": [
+    "applid",
+    "tran",
+    "term",
+    "program",
+    "userid",
+    "taskno",
+    "stop",
+    "response",
+    "dispatch",
+    "cpu",
+    "suspend",
+    "dispwait",
+    "fcwait",
+    "fcamrq",
+    "irwait"
+  ],
+  "description": "#fuw-kibana-dashboards\n\nModeled on the default layout of the performance list report of CICS Performance Analyzer.\n\nDeliberately sorted by response time, rather than the more typical timestamp order, to show the \"worst performing\" transaction at the top. The default sort order is not mentioned in the title because the sort order can be changed by the user."
+}
