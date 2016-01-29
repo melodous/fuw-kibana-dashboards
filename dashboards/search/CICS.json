@@ -7,7 +7,7 @@
   ],
   "title": "CICS",
   "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\n  \"index\": \"fuw-cics-sample\",\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"*\",\n      \"analyze_wildcard\": true,\n      \"lowercase_expanded_terms\": false\n    }\n  },\n  \"highlight\": {\n    \"pre_tags\": [\n      \"@kibana-highlighted-field@\"\n    ],\n    \"post_tags\": [\n      \"@/kibana-highlighted-field@\"\n    ],\n    \"fields\": {\n      \"*\": {}\n    },\n    \"fragment_size\": 2147483647\n  },\n  \"filter\": []\n}"
+    "searchSourceJSON": "{\n  \"index\": \"fuw-cics-*\",\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"*\",\n      \"analyze_wildcard\": true,\n      \"lowercase_expanded_terms\": false\n    }\n  },\n  \"highlight\": {\n    \"pre_tags\": [\n      \"@kibana-highlighted-field@\"\n    ],\n    \"post_tags\": [\n      \"@/kibana-highlighted-field@\"\n    ],\n    \"fields\": {\n      \"*\": {}\n    },\n    \"fragment_size\": 2147483647\n  },\n  \"filter\": []\n}"
   },
   "columns": [
     "_source"
