@@ -2,12 +2,9 @@
 
 This repository contains Kibana dashboards for visualizing data
 extracted from IBM z/OS mainframes by IBM Transaction Analysis Workbench for z/OS
-("Workbench").
+("Workbench"; the IBM product prefix for Workbench is FUW, hence the repository name prefix "fuw").
 
-**Note:** The IBM product prefix for Workbench is FUW, hence the repository name prefix "fuw".
-
-The dashboards in this repository are organized into the following sets,
-according to the z/OS subsystems and types of data being visualized:
+These dashboards visualize data from the following z/OS subsystems:
 
 * CICS
 * Coming soon: IMS
@@ -57,7 +54,7 @@ On Windows, run the `load.ps1` PowerShell script:
 By default, the `load` script loads the dashboards into the Elasticsearch instance at the URL http://localhost:9200,
 with no HTTP authentication.
 
-To specify a different URL, or HTTP authentication credentials, use command-line parameters.
+To specify a different URL or HTTP authentication credentials, use command-line parameters.
 
 On Unix:
 
@@ -82,12 +79,16 @@ This dashboard provides insights into delays in CICS transaction processing.
 This dashboard visualizes data extracted from CICS monitoring facility (CMF) performance class records
 (SMF type 110, subtype 1, class 3).
 
+This dashboard refers to the index pattern `fuw-cics-*`. If you have indexed CMF data to a different index pattern, edit the following searches to refer to that pattern:
+
+- CICS
+- CICS transaction performance
+
 ### IMS dashboards
 
 Coming soon!
 
 ## Acknowledgments
 
-With thanks to [Elastic](https://www.elastic.co/), this project is modeled on
-[elastic/beats-dashboards](https://github.com/elastic/beats-dashboards),
-and reuses portions of that project.
+With thanks to [Elastic](https://www.elastic.co/), this repository reuses portions of
+[elastic/beats-dashboards](https://github.com/elastic/beats-dashboards).
