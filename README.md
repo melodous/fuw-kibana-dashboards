@@ -1,6 +1,6 @@
 # z/OS log analysis in Kibana
 
-This repository contains [Kibana|https://www.elastic.co/products/kibana]
+This repository contains [Kibana](https://www.elastic.co/products/kibana)
 dashboards for analyzing operations logs from IBM z/OS mainframes.
 
 These logs include various record types, including SMF records.
@@ -11,7 +11,7 @@ The dashboards analyze operations log data from the following z/OS subsystems:
 * Coming soon: IMS
 
 To get the data for these dashboards from z/OS into Elasticsearch,
-we used [IBM Transaction Analysis Workbench for z/OS|http://www.ibm.com/support/knowledgecenter/SSKKZM]
+we used [IBM Transaction Analysis Workbench for z/OS](http://www.ibm.com/support/knowledgecenter/SSKKZM)
 ("Workbench"; the IBM product prefix for Workbench is FUW, hence the repository name prefix "fuw").
 
 ## Who we are
