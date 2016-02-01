@@ -3,9 +3,9 @@
 This repository contains [Kibana](https://www.elastic.co/products/kibana)
 dashboards for analyzing operations logs from IBM z/OS mainframes.
 
-These logs include various record types, including SMF records.
+The operations logs consist of various record types, including SMF records.
 
-The dashboards analyze operations log data from the following z/OS subsystems:
+The dashboards analyze operations logs from the following z/OS subsystems:
 
 * CICS
 * Coming soon: IMS
