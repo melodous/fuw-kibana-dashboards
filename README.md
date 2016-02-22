@@ -30,11 +30,11 @@ This repository is not supported by IBM.
 
 ## Requirements
 
-To use the dashboards, you will need the ELK stack:
+To use the dashboards, you will need the Elastic Stack:
 
+- Kibana 4.1.0 or later
 - Elasticsearch
 - Logstash
-- Kibana 4
 
 To extract data from z/OS for use with the dashboards, you will need:
 
