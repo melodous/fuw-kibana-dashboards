@@ -8,7 +8,13 @@ The operations logs consist of various record types, including SMF records.
 The dashboards analyze operations logs from the following z/OS subsystems:
 
 * CICS
-* Coming soon: IMS
+* IMS
+* Coming soon: IMS Connect with z/OS Connect
+
+Note: This readme shows screen captures of CICS and IMS dashboards; however,
+the repository currently only contains the definitions for the CICS dashboard.
+The corresponding definitions for the IMS dashboards will be added in the next
+few days.
 
 To get the data for these dashboards from z/OS into Elasticsearch,
 we used [IBM Transaction Analysis Workbench for z/OS](http://www.ibm.com/support/knowledgecenter/SSKKZM)
@@ -89,9 +95,17 @@ This dashboard refers to the index pattern `fuw-cics-*`. If you have indexed CMF
 - CICS
 - CICS transaction performance
 
-### IMS dashboards
+### IMS general health
 
-Coming soon!
+  ![IMS general health dashboard](screenshots/ims-general-health.png)
+
+This dashboard presents data from IMS log records.
+
+### IMS Fast Path buffer usage
+
+  ![IMS Fast Path buffer usage dashboard](screenshots/ims-fast-path-buffer-usage.png)
+
+This dashboard presents data from IMS log records specific to Fast Path buffer usage.
 
 ## Acknowledgments
 
