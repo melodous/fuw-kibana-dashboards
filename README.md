@@ -95,13 +95,13 @@ This dashboard refers to the index pattern `fuw-cics-*`. If you have indexed CMF
 - CICS
 - CICS transaction performance
 
-### IMS general health
+### IMS general health dashboard
 
   ![IMS general health dashboard](screenshots/ims-general-health.png)
 
 This dashboard presents data from IMS log records.
 
-### IMS Fast Path buffer usage
+### IMS Fast Path buffer usage dashboard
 
   ![IMS Fast Path buffer usage dashboard](screenshots/ims-fast-path-buffer-usage.png)
 
