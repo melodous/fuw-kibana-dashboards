@@ -1,0 +1,9 @@
+{
+  "title": "IMS FP maximum fast path buffer steals per transaction",
+  "version": 1,
+  "visState": "{\n  \"type\": \"metric\",\n  \"params\": {\n    \"fontSize\": 60\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"type\": \"max\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"fpbstl\"\n      }\n    }\n  ],\n  \"listeners\": {}\n}",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\n  \"index\": \"fuw-ims-*\",\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"*\",\n      \"analyze_wildcard\": true,\n      \"lowercase_expanded_terms\": false\n    }\n  },\n  \"filter\": []\n}"
+  },
+  "description": "#fuw-kibana-dashboards"
+}

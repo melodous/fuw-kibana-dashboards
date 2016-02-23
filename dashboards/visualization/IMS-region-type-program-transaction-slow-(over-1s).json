@@ -1,0 +1,9 @@
+{
+  "title": "IMS region type-program-transaction-slow (over 1s)",
+  "version": 1,
+  "visState": "{\"type\":\"pie\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"isDonut\":true,\"shareYAxis\":true},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"regtype\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"program\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"trancode\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"5\",\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"lowercase_expanded_terms\":false,\"query\":\"totaltm:[1 TO 2]\"}}}},{\"input\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"lowercase_expanded_terms\":false,\"query\":\"totaltm:[2 TO 3]\"}}}},{\"input\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"lowercase_expanded_terms\":false,\"query\":\"totaltm:[3 TO 4]\"}}}},{\"input\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"lowercase_expanded_terms\":false,\"query\":\"totaltm:[4 TO *]\"}}}}]}}],\"listeners\":{}}",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"fuw-ims-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"lowercase_expanded_terms\":false,\"query\":\"*\"}},\"filter\":[]}"
+  },
+  "description": "Breakdown of transactions by region type, then programs, then transactions, with poor transactions (over 1 second) counts being added #fuw-kibana-dashboards"
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hits": 0,
+  "description": "General IMS transaction lists with key identifiers. Note created while missing TOKENS - should add the tokens when possible. #fuw-kibana-dashboards",
+  "columns": [
+    "imstoken",
+    "trancode",
+    "userid",
+    "cpu",
+    "totaltm",
+    "abend"
+  ],
+  "title": "IMS transaction list with identifiers",
+  "sort": [
+    "totaltm",
+    "desc"
+  ],
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\n  \"index\": \"fuw-ims-*\",\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"lowercase_expanded_terms\": false,\n      \"query\": \"*\"\n    }\n  },\n  \"highlight\": {\n    \"pre_tags\": [\n      \"@kibana-highlighted-field@\"\n    ],\n    \"post_tags\": [\n      \"@/kibana-highlighted-field@\"\n    ],\n    \"fields\": {\n      \"*\": {}\n    },\n    \"fragment_size\": 2147483647\n  },\n  \"filter\": []\n}"
+  }
+}

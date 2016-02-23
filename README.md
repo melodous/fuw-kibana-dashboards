@@ -11,11 +11,6 @@ The dashboards analyze operations logs from the following z/OS subsystems:
 * IMS
 * Coming soon: IMS Connect with z/OS Connect
 
-Note: This readme shows screen captures of CICS and IMS dashboards; however,
-the repository currently only contains the definitions for the CICS dashboard.
-The corresponding definitions for the IMS dashboards will be added in the next
-few days.
-
 To get the data for these dashboards from z/OS into Elasticsearch,
 we used [IBM Transaction Analysis Workbench for z/OS](http://www.ibm.com/support/knowledgecenter/SSKKZM)
 ("Workbench"; the IBM product prefix for Workbench is FUW, hence the repository name prefix "fuw").
