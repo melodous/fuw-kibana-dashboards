@@ -13,18 +13,18 @@
     "applid",
     "tran",
     "term",
-    "program",
+    "pgmname",
     "userid",
-    "taskno",
+    "trannum",
     "stop",
     "response",
-    "dispatch",
-    "cpu",
-    "suspend",
-    "dispwait",
-    "fcwait",
-    "fcamrq",
-    "irwait"
+    "usrdispt",
+    "usrcput",
+    "susptime",
+    "dispwtt",
+    "fciowtt",
+    "fcamct",
+    "iriowtt"
   ],
   "description": "#fuw-kibana-dashboards\n\nModeled on the default layout of the performance list report of CICS Performance Analyzer.\n\nDeliberately sorted by response time, rather than the more typical timestamp order, to show the \"worst performing\" transaction at the top. The default sort order is not mentioned in the title because the sort order can be changed by the user."
 }

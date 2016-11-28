@@ -6,9 +6,9 @@
     "imstoken",
     "trancode",
     "userid",
-    "cpu",
+    "cputime",
     "totaltm",
-    "abend"
+    "compcode"
   ],
   "title": "IMS transaction list with identifiers",
   "sort": [
