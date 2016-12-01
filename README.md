@@ -56,8 +56,8 @@ The `.conf` files in this repository contain example Logstash configurations.
 ## Elasticsearch configuration
 
 As described in the Workbench product documentation, you need to map strings in the `fuw-*` index pattern (or whatever index pattern you use for data from Workbench) so that Elasticsearch does not "analyze" them:
-- Elasticsearch 5.0, and later: map strings to the `keyword` type
-- Earlier versions: map strings to be `not_analyzed`
+- Elasticsearch 5.0, and later: map strings to the [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/master/keyword.html) type
+- Earlier versions: map strings to be [`not_analyzed`](http://www.ibm.com/support/knowledgecenter/SSKKZM_1.3.0/fuwucon_forward_elastic_config.htm)
 
 ## Kibana configuration
 
