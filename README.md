@@ -13,7 +13,7 @@ The dashboards analyze operations logs from the following z/OS subsystems:
 
 To get the data for these dashboards from z/OS into Elasticsearch,
 we used [IBM Transaction Analysis Workbench for z/OS](http://www.ibm.com/support/knowledgecenter/SSKKZM)
-("Workbench"; the IBM product prefix for Workbench is FUW, hence the repository name prefix "fuw").
+("Workbench"). The IBM product prefix for Workbench is FUW, hence the "fuw" prefix in the name of this repository.
 
 ## Who we are
 
@@ -35,8 +35,36 @@ To extract data from z/OS for use with the dashboards, you will need:
 
 - IBM Transaction Analysis Workbench for z/OS, V1.3
 
-For details on using Workbench to get data from z/OS into Elasticsearch, see the
-[Workbench product documentation](http://www.ibm.com/support/knowledgecenter/SSKKZM_1.3.0/fuwutsk_big_data_logstash.dita).
+## Using Workbench to get log data from z/OS into Elastic
+
+The `.jcl` files in this repository contain example z/OS JCL that uses Workbench to extract log data
+for use with these dashboards.
+
+The JCL creates a CSV file and a corresponding Logstash configuration file that you can use with Logstash to load the data into Elastic. For example, for the CICS dashboards:
+
+```console
+logstash cics-logstash.conf < cics.csv
+```
+
+For more information about using Workbench to forward logs to Elastic, including automating data transfer from z/OS and running Logstash, see the
+[Workbench product documentation](http://www.ibm.com/support/knowledgecenter/SSKKZM_1.3.0/fuwucon_forward_elastic.htm).
+
+## Logstash configuration
+
+The `.conf` files in this repository contain example Logstash configurations.
+
+## Elasticsearch configuration
+
+As described in the Workbench product documentation, you need to map strings in the `fuw-*` index pattern (or whatever index pattern you use for data from Workbench) so that Elasticsearch does not "analyze" them:
+- Elasticsearch 5.0, and later: map strings to the `keyword` type
+- Earlier versions: map strings to be `not_analyzed`
+
+## Kibana configuration
+
+After loading data into Elasticsearch, and before using the dashboards, you need to define the following index patterns in Kibana:
+
+- `fuw-cics-*`
+- `fuw-ims-*`
 
 ## Installation
 
@@ -84,11 +112,6 @@ This dashboard provides insights into delays in CICS transaction processing.
 
 This dashboard presents data from CICS monitoring facility (CMF) performance class records
 (SMF type 110, subtype 1, class 3).
-
-This dashboard refers to the index pattern `fuw-cics-*`. If you have indexed CMF data to a different index pattern, edit the following searches to refer to that pattern:
-
-- CICS
-- CICS transaction performance
 
 ### IMS general health dashboard
 
